@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '100vh',
+    height: '100vh',
     backgroundColor: colors.gallery,
   },
   drop: {
@@ -43,11 +43,35 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '50%',
       backgroundColor: 'white',
     },
+    [theme.breakpoints.only('xs')]: {
+      width: 150 * 1.3,
+      height: 150 * 1.3,
+      boxShadow: `inset ${10 * 1.3}px ${10 * 1.3}px ${10 * 1.3}px ${boxShadows.softBlack}, 
+        ${15 * 1.3}px ${25 * 1.3}px ${10 * 1.3}px ${boxShadows.softBlack}, 
+        ${15 * 1.3}px ${20 * 1.3}px ${10 * 1.3}px ${boxShadows.softBlack}, 
+        inset ${-1 * 1.30}px ${-1 * 1.30}px ${15 * 1.3}px ${boxShadows.softLight}`,
+      '&::before': {
+        top: 35 * 1.3,
+        left: 35 * 1.3,
+        width: 20 * 1.3,
+        height: 20 * 1.3,
+      },
+      '&::after': {
+        top: 25 * 1.3,
+        left: 50 * 1.3,
+        width: 10 * 1.3,
+        height: 10 * 1.3,
+      },
+    },
   },
   icon: {
     height: '80px !important',
     width: '80px !important',
     color: colors.tundora,
+    [theme.breakpoints.only('xs')]: {
+      height: `${80 * 1.3}px !important`,
+      width: `${80 * 1.3}px !important`,
+    },
   },
 }))
 
