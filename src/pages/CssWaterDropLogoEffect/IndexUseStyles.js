@@ -3,8 +3,9 @@ import { colors, boxShadows } from './colors'
 // MUI STYLES
 import { makeStyles } from '@mui/styles'
 
-const xsMultiplier = 1.3
-const smMultiplier = 2
+const xsMultiplier = 1.75
+const smMultiplier = 2.5
+const mdMultiplier = 3.25
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -88,6 +89,27 @@ const useStyles = makeStyles((theme) => ({
         height: 10 * smMultiplier,
       },
     },
+    // MD SCREEN
+    [theme.breakpoints.only('md')]: {
+      width: 150 * mdMultiplier,
+      height: 150 * mdMultiplier,
+      boxShadow: `inset ${10 * mdMultiplier}px ${10 * mdMultiplier}px ${10 * mdMultiplier}px ${boxShadows.softBlack}, 
+        ${15 * mdMultiplier}px ${25 * mdMultiplier}px ${10 * mdMultiplier}px ${boxShadows.softBlack}, 
+        ${15 * mdMultiplier}px ${20 * mdMultiplier}px ${10 * mdMultiplier}px ${boxShadows.softBlack}, 
+        inset ${-1 * mdMultiplier}px ${-1 * mdMultiplier}px ${15 * mdMultiplier}px ${boxShadows.softLight}`,
+      '&::before': {
+        top: 35 * mdMultiplier,
+        left: 35 * mdMultiplier,
+        width: 20 * mdMultiplier,
+        height: 20 * mdMultiplier,
+      },
+      '&::after': {
+        top: 25 * mdMultiplier,
+        left: 50 * mdMultiplier,
+        width: 10 * mdMultiplier,
+        height: 10 * mdMultiplier,
+      },
+    },
   },
   icon: {
     height: '80px !important',
@@ -100,6 +122,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('sm')]: {
       height: `${80 * smMultiplier}px !important`,
       width: `${80 * smMultiplier}px !important`,
+    },
+    [theme.breakpoints.only('md')]: {
+      height: `${80 * mdMultiplier}px !important`,
+      width: `${80 * mdMultiplier}px !important`,
     },
   },
 }))
