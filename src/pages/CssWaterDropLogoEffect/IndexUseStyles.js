@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '50%',
       backgroundColor: 'white',
     },
-    // XL SCREEN
+    // XS SCREEN
     [theme.breakpoints.only('xs')]: {
       width: 150 * xsMultiplier,
       height: 150 * xsMultiplier,
@@ -89,8 +89,8 @@ const useStyles = makeStyles((theme) => ({
         height: 10 * smMultiplier,
       },
     },
-    // MD SCREEN
-    [theme.breakpoints.only('md')]: {
+    // UP FROM MD SCREEN
+    [theme.breakpoints.up('md')]: {
       width: 150 * mdMultiplier,
       height: 150 * mdMultiplier,
       boxShadow: `inset ${10 * mdMultiplier}px ${10 * mdMultiplier}px ${10 * mdMultiplier}px ${boxShadows.softBlack}, 
@@ -115,15 +115,18 @@ const useStyles = makeStyles((theme) => ({
     height: '80px !important',
     width: '80px !important',
     color: colors.tundora,
+    // XS SCREEN
     [theme.breakpoints.only('xs')]: {
       height: `${80 * xsMultiplier}px !important`,
       width: `${80 * xsMultiplier}px !important`,
     },
+    // SM SCREEN
     [theme.breakpoints.only('sm')]: {
       height: `${80 * smMultiplier}px !important`,
       width: `${80 * smMultiplier}px !important`,
     },
-    [theme.breakpoints.only('md')]: {
+    // UP FROM MD SCREEN
+    [theme.breakpoints.up('md')]: {
       height: `${80 * mdMultiplier}px !important`,
       width: `${80 * mdMultiplier}px !important`,
     },
