@@ -3,6 +3,8 @@ import { colors, boxShadows } from './colors'
 // MUI STYLES
 import { makeStyles } from '@mui/styles'
 
+const xsMultiplier = 1.3
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -44,23 +46,23 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'white',
     },
     [theme.breakpoints.only('xs')]: {
-      width: 150 * 1.3,
-      height: 150 * 1.3,
-      boxShadow: `inset ${10 * 1.3}px ${10 * 1.3}px ${10 * 1.3}px ${boxShadows.softBlack}, 
-        ${15 * 1.3}px ${25 * 1.3}px ${10 * 1.3}px ${boxShadows.softBlack}, 
-        ${15 * 1.3}px ${20 * 1.3}px ${10 * 1.3}px ${boxShadows.softBlack}, 
-        inset ${-1 * 1.30}px ${-1 * 1.30}px ${15 * 1.3}px ${boxShadows.softLight}`,
+      width: 150 * xsMultiplier,
+      height: 150 * xsMultiplier,
+      boxShadow: `inset ${10 * xsMultiplier}px ${10 * xsMultiplier}px ${10 * xsMultiplier}px ${boxShadows.softBlack}, 
+        ${15 * xsMultiplier}px ${25 * xsMultiplier}px ${10 * xsMultiplier}px ${boxShadows.softBlack}, 
+        ${15 * xsMultiplier}px ${20 * xsMultiplier}px ${10 * xsMultiplier}px ${boxShadows.softBlack}, 
+        inset ${-1 * xsMultiplier}px ${-1 * xsMultiplier}px ${15 * xsMultiplier}px ${boxShadows.softLight}`,
       '&::before': {
-        top: 35 * 1.3,
-        left: 35 * 1.3,
-        width: 20 * 1.3,
-        height: 20 * 1.3,
+        top: 35 * xsMultiplier,
+        left: 35 * xsMultiplier,
+        width: 20 * xsMultiplier,
+        height: 20 * xsMultiplier,
       },
       '&::after': {
-        top: 25 * 1.3,
-        left: 50 * 1.3,
-        width: 10 * 1.3,
-        height: 10 * 1.3,
+        top: 25 * xsMultiplier,
+        left: 50 * xsMultiplier,
+        width: 10 * xsMultiplier,
+        height: 10 * xsMultiplier,
       },
     },
   },
@@ -69,8 +71,8 @@ const useStyles = makeStyles((theme) => ({
     width: '80px !important',
     color: colors.tundora,
     [theme.breakpoints.only('xs')]: {
-      height: `${80 * 1.3}px !important`,
-      width: `${80 * 1.3}px !important`,
+      height: `${80 * xsMultiplier}px !important`,
+      width: `${80 * xsMultiplier}px !important`,
     },
   },
 }))
