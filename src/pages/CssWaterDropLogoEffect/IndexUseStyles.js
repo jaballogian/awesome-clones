@@ -4,6 +4,7 @@ import { colors, boxShadows } from './colors'
 import { makeStyles } from '@mui/styles'
 
 const xsMultiplier = 1.3
+const smMultiplier = 2
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '50%',
       backgroundColor: 'white',
     },
+    // XL SCREEN
     [theme.breakpoints.only('xs')]: {
       width: 150 * xsMultiplier,
       height: 150 * xsMultiplier,
@@ -65,6 +67,27 @@ const useStyles = makeStyles((theme) => ({
         height: 10 * xsMultiplier,
       },
     },
+    // SM SCREEN
+    [theme.breakpoints.only('sm')]: {
+      width: 150 * smMultiplier,
+      height: 150 * smMultiplier,
+      boxShadow: `inset ${10 * smMultiplier}px ${10 * smMultiplier}px ${10 * smMultiplier}px ${boxShadows.softBlack}, 
+        ${15 * smMultiplier}px ${25 * smMultiplier}px ${10 * smMultiplier}px ${boxShadows.softBlack}, 
+        ${15 * smMultiplier}px ${20 * smMultiplier}px ${10 * smMultiplier}px ${boxShadows.softBlack}, 
+        inset ${-1 * smMultiplier}px ${-1 * smMultiplier}px ${15 * smMultiplier}px ${boxShadows.softLight}`,
+      '&::before': {
+        top: 35 * smMultiplier,
+        left: 35 * smMultiplier,
+        width: 20 * smMultiplier,
+        height: 20 * smMultiplier,
+      },
+      '&::after': {
+        top: 25 * smMultiplier,
+        left: 50 * smMultiplier,
+        width: 10 * smMultiplier,
+        height: 10 * smMultiplier,
+      },
+    },
   },
   icon: {
     height: '80px !important',
@@ -73,6 +96,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('xs')]: {
       height: `${80 * xsMultiplier}px !important`,
       width: `${80 * xsMultiplier}px !important`,
+    },
+    [theme.breakpoints.only('sm')]: {
+      height: `${80 * smMultiplier}px !important`,
+      width: `${80 * smMultiplier}px !important`,
     },
   },
 }))
