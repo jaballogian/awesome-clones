@@ -1,5 +1,11 @@
 import React from 'react'
 
+// MUIS
+import Box from '@mui/material/Box'
+
+// MUI ICONS
+import IconApple from '@mui/icons-material/Apple'
+
 // STYELS
 import useStyles from './IndexUseStyles'
 
@@ -7,9 +13,11 @@ const Index = () => {
   const classes = useStyles()
 
   return (
-    <div>
-      Css Water Drop Logo Effect
-    </div>
+    <Box className={classes.root}>
+      <Box className={classes.drop}>
+        <IconApple className={classes.icon}/>
+      </Box>
+    </Box>
   )
 }
 
