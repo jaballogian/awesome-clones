@@ -9,6 +9,7 @@ function App() {
     {
       id: 1,
       element: <CssWaterDropLogoEffect/>,
+      source: 'https://www.youtube.com/watch?v=GnllGn9Oifs',
     },
   ]
 
