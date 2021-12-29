@@ -1,4 +1,4 @@
-import { colors, boxShadows } from './colors'
+import { colors, boxShadows } from './constants'
 
 // MUI STYLES
 import { makeStyles } from '@mui/styles'
