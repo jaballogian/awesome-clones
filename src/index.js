@@ -11,7 +11,7 @@ import customTheme from 'constants/customTheme'
 // CONTEXTS
 import { AllPagesContextProvider } from 'contexts/AllPagesContext'
 
-// MATERIAL UI
+// MUI STYLES
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles'
 
 // STYLES
