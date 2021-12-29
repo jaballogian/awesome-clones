@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // CONSTANTS
 import customTheme from './constants'
@@ -18,10 +18,12 @@ import useStyles from './IndexUseStyles'
 const Index = () => {
   const classes = useStyles()
 
+  const [ hoveredCard, setHoveredCard ] = useState(null)
+
   const titleList = [
     'Card One',
-    'Card One',
-    'Card One',
+    'Card Two',
+    'Card Three',
   ]
 
   return (
@@ -32,14 +34,22 @@ const Index = () => {
             <Card 
               key={index}
               className={classes.card}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
-              <Box className={classes.content}>
+              <Box
+                className={
+                  hoveredCard === index ? 
+                  `${classes.content} ${classes.cardHovered}` : 
+                  classes.content
+                }
+              >
                 {/* NUMBER */}
                 <Typography
                   variant='h2'
                   className={classes.number}
                 >
-                  {`0${index}`}
+                  {`0${index + 1}`}
                 </Typography>
 
                 {/* TITLE */}
@@ -60,7 +70,10 @@ const Index = () => {
                 </Typography>
 
                 {/* LINK */}
-                <Link href='#'>
+                <Link 
+                  href='#'
+                  className={classes.link}
+                >
                   Read More
                 </Link>
               </Box>
