@@ -34,6 +34,15 @@ const useStyles = makeStyles((theme) => ({
       clipPath: 'circle(20% at 10% 10%)',
     },
   },
+  container: {
+    overflow: 'auto',
+    width: '100%',
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '30px 0px',
+  },
   tilt: {
     position: 'relative',
     width: 280,
