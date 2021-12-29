@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 // COMPONENTS
 import App from './App'
@@ -20,7 +21,9 @@ ReactDOM.render(
   <ThemeProvider theme={customTheme}>
     <StyledEngineProvider injectFirst>
       <AllPagesContextProvider>
-        <App/>
+        <BrowserRouter>
+          <App/>
+        </BrowserRouter>
       </AllPagesContextProvider>
     </StyledEngineProvider>
   </ThemeProvider>,
