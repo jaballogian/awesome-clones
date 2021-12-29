@@ -34,8 +34,7 @@ const useStyles = makeStyles((theme) => ({
       clipPath: 'circle(20% at 10% 10%)',
     },
   },
-  card: {
-    backgroundColor: boxShadows.softWhite,
+  tilt: {
     position: 'relative',
     width: 280,
     height: 400,
@@ -49,6 +48,16 @@ const useStyles = makeStyles((theme) => ({
     borderTop: `1px solid ${boxShadows.hardWhite}`,
     borderLeft: `1px solid ${boxShadows.hardWhite}`,
     backdropFilter: 'blur(5px)',
+    zIndex: 1,
+  },
+  card: {
+    backgroundColor: boxShadows.softWhite,
+    width: '100%',
+    height: '100%',
+    overflow: 'hidden',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     zIndex: 1,
   },
   content: {

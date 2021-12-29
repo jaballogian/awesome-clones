@@ -15,6 +15,9 @@ import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles'
 // STYLES
 import useStyles from './IndexUseStyles'
 
+// TILT
+import Tilt from 'react-parallax-tilt'
+
 const Index = () => {
   const classes = useStyles()
 
@@ -31,53 +34,64 @@ const Index = () => {
       <StyledEngineProvider injectFirst>
         <Box className={classes.root}>
           {titleList.map((item, index) => (
-            <Card 
+            <Tilt
               key={index}
-              className={classes.card}
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
+              className={classes.tilt}
+              tiltMaxAngleX={35}
+              tiltMaxAngleY={35}
+              transitionSpeed={400}
+              glareEnable={true}
+              glareMaxOpacity={0.5}
+              glareColor='white'
+              glarePosition='all'
             >
-              <Box
-                className={
-                  hoveredCard === index ? 
-                  `${classes.content} ${classes.cardHovered}` : 
-                  classes.content
-                }
+              <Card 
+                className={classes.card}
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
               >
-                {/* NUMBER */}
-                <Typography
-                  variant='h2'
-                  className={classes.number}
+                <Box
+                  className={
+                    hoveredCard === index ? 
+                    `${classes.content} ${classes.cardHovered}` : 
+                    classes.content
+                  }
                 >
-                  {`0${index + 1}`}
-                </Typography>
+                  {/* NUMBER */}
+                  <Typography
+                    variant='h2'
+                    className={classes.number}
+                  >
+                    {`0${index + 1}`}
+                  </Typography>
 
-                {/* TITLE */}
-                <Typography
-                  variant='h3'
-                  className={classes.title}
-                >
-                  {item}
-                </Typography>
+                  {/* TITLE */}
+                  <Typography
+                    variant='h3'
+                    className={classes.title}
+                  >
+                    {item}
+                  </Typography>
 
-                {/* PARAGRAPH */}
-                <Typography
-                  variant='subtitle1'
-                  className={classes.paragraph}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </Typography>
+                  {/* PARAGRAPH */}
+                  <Typography
+                    variant='subtitle1'
+                    className={classes.paragraph}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </Typography>
 
-                {/* LINK */}
-                <Link 
-                  href='#'
-                  className={classes.link}
-                >
-                  Read More
-                </Link>
-              </Box>
-            </Card>      
+                  {/* LINK */}
+                  <Link 
+                    href='#'
+                    className={classes.link}
+                  >
+                    Read More
+                  </Link>
+                </Box>
+              </Card>
+            </Tilt>      
           ))}
         </Box>
       </StyledEngineProvider>
