@@ -32,8 +32,12 @@ const Index = () => {
   return (
     <ThemeProvider theme={customTheme}>
       <Box className={classes.root}>
-        <AppBar position='static'>
-          <Toolbar className={classes.header}>
+        {/* HEADER */}
+        <AppBar 
+          position='static' 
+          className={classes.header}
+        >
+          <Toolbar className={classes.toolbar}>
             {/* LOGO */}
             <Link href='#'>
               <Box
@@ -64,6 +68,42 @@ const Index = () => {
             </List>
           </Toolbar>
         </AppBar>
+
+        {/* TEXTS */}
+        <Box className={classes.textContainer}>
+          {/* TITLE */}
+          <Typography 
+            variant='h2'
+            className={classes.title}
+          >
+            It's not just coffee
+            <br/>It's&nbsp;
+            <span className={classes.titleGreen}>
+              Starbucks
+            </span>
+          </Typography>
+
+          {/* PARAGRAPH */}
+          <Typography 
+            variant='subtitle1'
+            className={classes.paragraph}
+          >
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </Typography>
+
+          {/* LEARN MORE */}
+          <Link 
+            href='#'
+            className={classes.learnMore}
+          >
+            <Typography variant='subtitle1'>
+              Learn More
+            </Typography>
+          </Link>
+        </Box>
       </Box>
     </ThemeProvider>
   )
