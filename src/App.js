@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 // PAGES
 import CssWaterDropLogoEffect from 'pages/CssWaterDropLogoEffect/Index'
 import GlassmorphismCardHover from 'pages/GlassmorphismCardHover/Index'
+import StarbucksLandingPage from 'pages/StarbucksLandingPage/Index'
 
 function App() {
   const pages = [
@@ -16,6 +17,11 @@ function App() {
       id: 2,
       element: <GlassmorphismCardHover/>,
       source: 'https://www.youtube.com/watch?v=hv0rNxr1XXk',
+    },
+    {
+      id: 3,
+      element: <StarbucksLandingPage/>,
+      source: 'https://www.youtube.com/watch?v=91Q6RvKvd7o',
     },
   ]
 
