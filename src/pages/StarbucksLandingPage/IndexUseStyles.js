@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     width: '100%',
     padding: '20px 100px',
-    background: 'white',
+    background: 'transparent',
     boxShadow: 'unset',
   },
   toolbar: {
@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
   textContainer: {
+    position: 'relative',
     maxWidth: 600,
   },
   title: {
@@ -76,6 +77,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
   },
   imageContainer: {
+    position: 'relative',
     width: 600,
     display: 'flex',
     justifyContent: 'flex-end',
@@ -126,6 +128,17 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     margin: '10px 0px',
     fontSize: 36,
+    color: 'black',
+    filter: 'invert(1)',
+  },
+  circle: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: colors.funGreen,
+    clipPath: 'circle(600px at right 800px)',
   },
 }))
 

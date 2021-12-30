@@ -52,6 +52,9 @@ const Index = () => {
   return (
     <ThemeProvider theme={customTheme}>
       <Box className={classes.root}>
+        {/* CIRCLE */}
+        <Box className={classes.circle}/>
+        
         {/* HEADER */}
         <AppBar 
           position='static' 
