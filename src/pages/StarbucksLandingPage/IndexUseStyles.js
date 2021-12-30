@@ -137,7 +137,6 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     width: '100%',
     height: '100%',
-    backgroundColor: colors.funGreen,
     clipPath: 'circle(600px at right 800px)',
   },
 }))

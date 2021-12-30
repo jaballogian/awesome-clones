@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // CONSTANTS
-import customTheme from './constants'
+import customTheme, { colors } from './constants'
 
 // IMAGES
 import Image1 from './assets/image1.png'
@@ -30,17 +30,28 @@ import useStyles from './IndexUseStyles'
 const Index = () => {
   const classes = useStyles()
 
+  const coffeeOptionsList = [
+    { 
+      image: Image1, 
+      color: colors.funGreen, 
+    },
+    { 
+      image: Image2, 
+      color: colors.deepBlush, 
+    },
+    { 
+      image: Image3, 
+      color: colors.hopbush, 
+    },
+  ]
+  
+  const [ selectedImage, setSelectedImage ] = useState(coffeeOptionsList[0])
+
   const navigationList = [
     'Home',
     'Menu',
     `What's New`,
     'Contact',
-  ]
-
-  const coffeeOptionsList = [
-    Image1,
-    Image2,
-    Image3,
   ]
 
   const socialMediasList = [
@@ -53,8 +64,11 @@ const Index = () => {
     <ThemeProvider theme={customTheme}>
       <Box className={classes.root}>
         {/* CIRCLE */}
-        <Box className={classes.circle}/>
-        
+        <Box 
+          className={classes.circle}
+          sx={{ backgroundColor: selectedImage.color }}
+        />
+
         {/* HEADER */}
         <AppBar 
           position='static' 
@@ -128,12 +142,12 @@ const Index = () => {
           </Link>
         </Box>
 
-        {/* IMAGE */}
+        {/* SELECTED COFFEE IMAGE */}
         <Box className={classes.imageContainer}>
           <Box
             component='img'
             className={classes.imageCoffee}
-            src={Image1}
+            src={selectedImage.image}
             alt=''
           />
         </Box>
@@ -144,10 +158,11 @@ const Index = () => {
             <ListItem
               key={index}
               className={classes.coffeeOptionsItem}
+              onClick={() => setSelectedImage(item)}
             >
               <Box
                 component='img'
-                src={item}
+                src={item.image}
                 alt=''
                 className={classes.coffeeOptionsImage}
               />
