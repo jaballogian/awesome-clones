@@ -4,6 +4,9 @@ import React from 'react'
 import customTheme from './constants'
 
 // IMAGES
+import Image1 from './assets/image1.png'
+import Image2 from './assets/image2.png'
+import Image3 from './assets/image3.png'
 import ImageLogo from './assets/logo.png'
 
 // MUIS
@@ -27,6 +30,12 @@ const Index = () => {
     'Menu',
     `What's New`,
     'Contact',
+  ]
+
+  const coffeeOptionsList = [
+    Image1,
+    Image2,
+    Image3,
   ]
 
   return (
@@ -104,6 +113,33 @@ const Index = () => {
             </Typography>
           </Link>
         </Box>
+
+        {/* IMAGE */}
+        <Box className={classes.imageContainer}>
+          <Box
+            component='img'
+            className={classes.imageCoffee}
+            src={Image1}
+            alt=''
+          />
+        </Box>
+
+        {/* COFFEE OPITIONS */}
+        <List className={classes.coffeeOptionsRoot}>
+          {coffeeOptionsList.map((item, index) => (
+            <ListItem
+              key={index}
+              className={classes.coffeeOptionsItem}
+            >
+              <Box
+                component='img'
+                src={item}
+                alt=''
+                className={classes.coffeeOptionsImage}
+              />
+            </ListItem>
+          ))}
+        </List>
       </Box>
     </ThemeProvider>
   )

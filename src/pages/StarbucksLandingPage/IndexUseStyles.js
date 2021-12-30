@@ -75,6 +75,37 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 1,
     textDecoration: 'none',
   },
+  imageContainer: {
+    width: 600,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    paddingRight: 50,
+    marginTop: 50,
+  },
+  imageCoffee: {
+    maxWidth: 340,
+  },
+  coffeeOptionsRoot: {
+    padding: 'unset',
+    position: 'absolute',
+    left: '50%',
+    bottom: 20,
+    transform: 'translateX(-50%)',
+    display: 'flex',
+  },
+  coffeeOptionsItem: {
+    padding: 'unset',
+    listStyle: 'none',
+    display: 'inline-block',
+    margin: '0px 20px',
+    cursor: 'pointer',
+    '&:hover': {
+      transform: 'translateY(-15px)',
+    },
+  },
+  coffeeOptionsImage: {
+    maxHeight: 120,
+  },
 }))
 
 export default useStyles
