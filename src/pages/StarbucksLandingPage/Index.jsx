@@ -10,6 +10,7 @@ import Link from '@mui/material/Link'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
 
 // STYLES
 import useStyles from './IndexUseStyles'
@@ -25,14 +26,12 @@ const Index = () => {
   ]
 
   return (
+    // ADD POPPINS FONT
     <Box className={classes.root}>
       <AppBar position='static'>
-        <Toolbar>
+        <Toolbar className={classes.header}>
           {/* LOGO */}
-          <Link 
-            href='#'
-            className={classes.logoLink}
-          >
+          <Link href='#'>
             <Box
               component='img'
               src={ImageLogo}
@@ -52,7 +51,9 @@ const Index = () => {
                   href='#'
                   className={classes.navigationLink}
                 >
-                  {item}
+                  <Typography variant='subtitle1'>
+                    {item}
+                  </Typography>
                 </Link>
               </ListItem>
             ))}
