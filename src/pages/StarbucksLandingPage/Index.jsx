@@ -19,6 +19,11 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { ThemeProvider } from '@mui/material/styles'
 
+// MUI ICONS
+import IconFacebook from '@mui/icons-material/Facebook'
+import IconTwitter from '@mui/icons-material/Twitter'
+import IconInstagram from '@mui/icons-material/Instagram'
+
 // STYLES
 import useStyles from './IndexUseStyles'
 
@@ -36,6 +41,12 @@ const Index = () => {
     Image1,
     Image2,
     Image3,
+  ]
+
+  const socialMediasList = [
+    { icon: IconFacebook },
+    { icon: IconTwitter },
+    { icon: IconInstagram },
   ]
 
   return (
@@ -138,6 +149,20 @@ const Index = () => {
                 className={classes.coffeeOptionsImage}
               />
             </ListItem>
+          ))}
+        </List>
+
+        {/* SOCIAL MEDIAS */}
+        <List className={classes.socialMediasRoot}>
+          {socialMediasList.map((item, index) => (
+            <Link 
+              key={index}
+              href='#'
+            >
+              <ListItem className={classes.socialMediasItem}>
+                <item.icon className={classes.socialMediasIcon}/>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Box>

@@ -99,12 +99,33 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     margin: '0px 20px',
     cursor: 'pointer',
+    transition: '0.5s',
     '&:hover': {
       transform: 'translateY(-15px)',
     },
   },
   coffeeOptionsImage: {
     maxHeight: 120,
+  },
+  socialMediasRoot: {
+    padding: 'unset',
+    position: 'absolute',
+    top: '50%',
+    right: 30,
+    transform: 'translateY(-50%)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+  },
+  socialMediasItem: {
+    padding: 'unset',
+    listStyle: 'none',
+  },
+  socialMediasIcon: {
+    display: 'inline-block',
+    margin: '10px 0px',
+    fontSize: 36,
   },
 }))
 
