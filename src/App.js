@@ -7,6 +7,7 @@ import GlassmorphismCardHover from 'pages/GlassmorphismCardHover/Index'
 import StarbucksLandingPage from 'pages/StarbucksLandingPage/Index'
 
 function App() {
+  // PAGE ITEMS: ID, ELEMENT, SOURCE, CREDITS, GITHUB CODE
   const pages = [
     {
       id: 1,
