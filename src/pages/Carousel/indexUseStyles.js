@@ -28,10 +28,16 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     width: '100%',
     height: '100%',
-    objectFit: 'cover',
     backgroundPosition: 'center',
+    objectFit: 'cover',
     borderRadius: 20,
     boxShadow: '0px 0px 20px rgba(255, 255, 255, 0.5)',
+  },
+  radioButton: {
+    color: 'white',
+    '&.Mui-checked': {
+      color: 'white',
+    },
   },
 }))
 
