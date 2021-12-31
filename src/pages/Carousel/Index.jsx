@@ -17,6 +17,13 @@ const Index = () => {
       sx={{ backgroundImage: `url(${Image1})` }}
       className={classes.root}
     >
+      {/* SELECTED IMAGE */}
+      <Box 
+        component='img'
+        className={classes.selectedImage}
+        src={Image1}
+        alt=''
+      ></Box>
     </Box>
   )
 }

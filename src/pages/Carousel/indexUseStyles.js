@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     padding: 100,
     position: 'relative',
+    objectFit: 'cover',
+    backgroundPosition: 'center',
     '&::after': {
       content: '""',
       position: 'absolute',
@@ -16,8 +18,20 @@ const useStyles = makeStyles((theme) => ({
       height: '100%',
       top: 0,
       left: 0,
+      objectFit: 'cover',
+      backgroundPosition: 'center',
       backdropFilter: 'blur(5px)',
     },
+  },
+  selectedImage: {
+    position: 'relative',
+    zIndex: 1,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    backgroundPosition: 'center',
+    borderRadius: 20,
+    boxShadow: '0px 0px 20px rgba(255, 255, 255, 0.5)',
   },
 }))
 
