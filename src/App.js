@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import WaterDropLogoEffect from 'pages/WaterDropLogoEffect/Index'
 import GlassmorphismCardHover from 'pages/GlassmorphismCardHover/Index'
 import StarbucksLandingPage from 'pages/StarbucksLandingPage/Index'
-import Carousel from 'pages/Carousel/Index'
+import Carousell from 'pages/Carousell/Index'
 
 function App() {
   // PAGE ITEMS: ID, ELEMENT, SOURCE, CREDITS, GITHUB CODE
@@ -27,7 +27,7 @@ function App() {
     },
     {
       id: 4,
-      element: <Carousel/>,
+      element: <Carousell/>,
       source: 'https://www.youtube.com/watch?v=0wvrlOyGlq0',
     },
   ]
