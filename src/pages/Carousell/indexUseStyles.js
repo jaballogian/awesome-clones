@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     position: 'relative',
     objectFit: 'cover',
-    backgroundPosition: 'center',
     transition: '1s ease-in-out',
     padding: 100,
     [theme.breakpoints.only('xs')]: {
