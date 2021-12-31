@@ -44,6 +44,7 @@ const Index = () => {
           row
           value={selectedImage}
           onChange={(event) => setSelectedImage(event.target.value)}
+          className={classes.radioGrop}
         >
           {imagesList.map((item, index) => (
             <FormControlLabel 

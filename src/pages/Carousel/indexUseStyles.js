@@ -33,6 +33,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 20,
     boxShadow: '0px 0px 20px rgba(255, 255, 255, 0.5)',
   },
+  radioGrop: {
+    position: 'absolute',
+    bottom: 20,
+    left: '50%',
+    transform: 'translateX(-50%)',
+  },
   radioButton: {
     color: 'white',
     '&.Mui-checked': {
