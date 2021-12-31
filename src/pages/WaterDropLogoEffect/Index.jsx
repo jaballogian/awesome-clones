@@ -7,7 +7,7 @@ import Box from '@mui/material/Box'
 import IconApple from '@mui/icons-material/Apple'
 
 // STYELS
-import useStyles from './indexUseStyles'
+import useStyles from './indexUseStyles2'
 
 const Index = () => {
   const classes = useStyles()
