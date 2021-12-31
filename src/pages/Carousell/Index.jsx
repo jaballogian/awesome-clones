@@ -34,28 +34,40 @@ const Index = () => {
       sx={{ backgroundImage: `url(${selectedImage})` }}
       className={classes.root}
     >
-      {/* SELECTED IMAGE */}
-      <Box 
-        sx={{ backgroundImage: `url(${selectedImage})` }}
-        className={classes.selectedImage}
-      >
-        {/* RADIO BUTTONS */}
-        <RadioGroup 
-          row
-          value={selectedImage}
-          onChange={(event) => setSelectedImage(event.target.value)}
-          className={classes.radioGrop}
+      {/* CAROUSELL CONTAINER */}
+      <Box className={classes.carousellContainer}>
+        <Box 
+          className={classes.carousellItemContainer}
+          sx={{ marginLeft: `-${100 * imagesList.indexOf(selectedImage)}%` }}
         >
           {imagesList.map((item, index) => (
-            <FormControlLabel 
+            <Box
               key={index}
-              value={item} 
-              control={<Radio className={classes.radioButton} />} 
-              label='' 
+              component='img'
+              src={item}
+              alt=''
+              className={classes.carousellItem}
             />
           ))}
-        </RadioGroup>
+        </Box>
       </Box>
+
+      {/* RADIO BUTTONS */}
+      <RadioGroup 
+        row
+        value={selectedImage}
+        onChange={(event) => setSelectedImage(event.target.value)}
+        className={classes.radioGrop}
+      >
+        {imagesList.map((item, index) => (
+          <FormControlLabel 
+            key={index}
+            value={item} 
+            control={<Radio className={classes.radioButton} />} 
+            label='' 
+          />
+        ))}
+      </RadioGroup>
     </Box>
   )
 }

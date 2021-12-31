@@ -1,3 +1,6 @@
+// CONSTANTS
+import { boxShadows } from './constants'
+
 // MUI STYLES
 import { makeStyles } from '@mui/styles'
 
@@ -23,21 +26,31 @@ const useStyles = makeStyles((theme) => ({
       backdropFilter: 'blur(5px)',
     },
   },
-  selectedImage: {
+  carousellContainer: {
     position: 'relative',
     zIndex: 1,
-    width: '100%',
     height: '100%',
-    backgroundPosition: 'center',
-    objectFit: 'cover',
+    overflowX: 'hidden',
     borderRadius: 20,
-    boxShadow: '0px 0px 20px rgba(255, 255, 255, 0.5)',
+    boxShadow: `0px 0px 20px ${boxShadows.softWhite}`,
+  },
+  carousellItemContainer: {
+    zIndex: 1,
+    height: '100%',
+    width: 'calc(100vw - 200px)',
+    display: 'flex',
+    borderRadius: 20,
+  },
+  carousellItem: {
+    width: 'calc(100vw - 200px)',
+    objectFit: 'cover',
   },
   radioGrop: {
     position: 'absolute',
-    bottom: 20,
+    bottom: 25,
     left: '50%',
     transform: 'translateX(-50%)',
+    zIndex: 1,
   },
   radioButton: {
     color: 'white',
