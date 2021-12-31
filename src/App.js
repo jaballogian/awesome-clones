@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 // PAGES
-import CssWaterDropLogoEffect from 'pages/CssWaterDropLogoEffect/Index'
+import WaterDropLogoEffect from 'pages/WaterDropLogoEffect/Index'
 import GlassmorphismCardHover from 'pages/GlassmorphismCardHover/Index'
 import StarbucksLandingPage from 'pages/StarbucksLandingPage/Index'
 
@@ -11,7 +11,7 @@ function App() {
   const pages = [
     {
       id: 1,
-      element: <CssWaterDropLogoEffect/>,
+      element: <WaterDropLogoEffect/>,
       source: 'https://www.youtube.com/watch?v=GnllGn9Oifs',
     },
     {
