@@ -65,6 +65,7 @@ const Index = () => {
             value={item} 
             control={<Radio className={classes.radioButton} />} 
             label='' 
+            className={classes.radioFormControlLabel}
           />
         ))}
       </RadioGroup>

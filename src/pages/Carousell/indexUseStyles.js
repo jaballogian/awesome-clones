@@ -10,11 +10,14 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    padding: 100,
     position: 'relative',
     objectFit: 'cover',
     backgroundPosition: 'center',
     transition: '1s ease-in-out',
+    padding: 100,
+    [theme.breakpoints.only('xs')]: {
+      padding: 50,
+    },
     '&::after': {
       content: '""',
       position: 'absolute',
@@ -38,14 +41,16 @@ const useStyles = makeStyles((theme) => ({
   carousellItemContainer: {
     zIndex: 1,
     height: '100%',
-    width: 'calc(100vw - 200px)',
     display: 'flex',
     borderRadius: 20,
     transition: '1s ease-in-out',
   },
   carousellItem: {
-    width: 'calc(100vw - 200px)',
     objectFit: 'cover',
+    width: 'calc(100vw - 200px)',
+    [theme.breakpoints.only('xs')]: {
+      width: 'calc(100vw - 100px)',
+    },
   },
   radioGrop: {
     position: 'absolute',
@@ -53,6 +58,13 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translateX(-50%)',
     zIndex: 1,
+    width: 'fit-content',
+    [theme.breakpoints.only('xs')]: {
+      bottom: 5,
+    },
+  },
+  radioFormControlLabel: {
+    margin: 0,
   },
   radioButton: {
     color: 'white',
