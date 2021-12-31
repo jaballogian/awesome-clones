@@ -25,7 +25,7 @@ import IconTwitter from '@mui/icons-material/Twitter'
 import IconInstagram from '@mui/icons-material/Instagram'
 
 // STYLES
-import useStyles from './IndexUseStyles'
+import useStyles from './indexUseStyles'
 
 const Index = () => {
   const classes = useStyles()
