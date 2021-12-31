@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     objectFit: 'cover',
     backgroundPosition: 'center',
+    transition: '1s ease-in-out',
     '&::after': {
       content: '""',
       position: 'absolute',
@@ -40,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     width: 'calc(100vw - 200px)',
     display: 'flex',
     borderRadius: 20,
+    transition: '1s ease-in-out',
   },
   carousellItem: {
     width: 'calc(100vw - 200px)',
