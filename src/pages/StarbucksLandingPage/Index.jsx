@@ -7,6 +7,7 @@ import customTheme, { colors } from './constants'
 import Image1 from './assets/image1.png'
 import Image2 from './assets/image2.png'
 import Image3 from './assets/image3.png'
+import Image4 from './assets/image4.png'
 import ImageLogo from './assets/logo.png'
 
 // MUIS
@@ -42,6 +43,10 @@ const Index = () => {
     { 
       image: Image3, 
       color: colors.hopbush, 
+    },
+    { 
+      image: Image4, 
+      color: colors.brown, 
     },
   ]
   
