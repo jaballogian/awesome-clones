@@ -14,6 +14,7 @@ customTheme = responsiveFontSizes(customTheme)
 export default customTheme
 
 export const colors = {
+  brown: '#9A2F2B', // BROWN
   deepBlush: '#EB7495', // PINK
   funGreen: '#017143', // GREEN
   hopbush: '#D752B1', // LIGHT VIOLET
