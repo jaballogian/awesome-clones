@@ -5,6 +5,7 @@ import { colors } from './constants'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
+  // TODO: ADD STYLES FOR MD SCREEN
   root: {
     position: 'relative',
     width: '100vw',
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '100px 20px 120px',
       flexDirection: 'column',
     },
-    // MD SCREEN
+    // SM SCREEN
     [theme.breakpoints.only('sm')]: {
       padding: '100px 40px 120px',
       flexDirection: 'column',
@@ -44,6 +45,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     padding: 'unset',
   },
+  toggleIcon: {
+    color: 'black',
+    width: 30,
+    height: 30,
+    cursor: 'pointer',
+    zIndex: 20,
+  },
   logo: {
     maxWidth: 80,
     // XS AND SM SCREENS
@@ -58,9 +66,27 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  navigationSmallScreen: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    backgroundColor: 'white',
+    zIndex: 10,
+  },
   navigationItem: {
     minWidth: 'fit-content',
     padding: 'unset',
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      width: 'fit-content',
+      textAlign: 'center',
+    },
   },
   navigationLink: {
     display: 'inline-block',
@@ -68,6 +94,17 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     marginLeft: 40,
     textDecoration: 'none',
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      marginLeft: 0,
+    },
+  },
+  navigationText: {
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.5em',
+      margin: '5px 0px',
+    },
   },
   textContainer: {
     position: 'relative',

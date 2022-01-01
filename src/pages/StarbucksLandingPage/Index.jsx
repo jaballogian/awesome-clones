@@ -21,9 +21,11 @@ import Typography from '@mui/material/Typography'
 import { ThemeProvider } from '@mui/material/styles'
 
 // MUI ICONS
+import IconClose from '@mui/icons-material/Close'
 import IconFacebook from '@mui/icons-material/Facebook'
 import IconTwitter from '@mui/icons-material/Twitter'
 import IconInstagram from '@mui/icons-material/Instagram'
+import IconMenu from '@mui/icons-material/Menu'
 
 // STYLES
 import useStyles from './indexUseStyles'
@@ -51,6 +53,7 @@ const Index = () => {
   ]
   
   const [ selectedImage, setSelectedImage ] = useState(coffeeOptionsList[0])
+  const [ isNavigationShown, setIsNavigationShown ] = useState(false)
 
   const navigationList = [
     'Home',
@@ -90,8 +93,25 @@ const Index = () => {
               />
             </Link>
 
+            {/* TOGGLE ICON */}
+            {isNavigationShown ?
+            <IconClose 
+              className={classes.toggleIcon}
+              onClick={() => setIsNavigationShown(false)}
+            /> :
+            <IconMenu 
+              className={classes.toggleIcon}
+              onClick={() => setIsNavigationShown(true)}
+            />}
+
             {/* NAVIGATIONS */}
-            <List className={classes.navigation}>
+            <List 
+              className={
+                isNavigationShown ? 
+                classes.navigationSmallScreen :
+                classes.navigation
+              }
+            >
               {navigationList.map((item, index) => (
                 <ListItem
                   key={index}
@@ -101,7 +121,10 @@ const Index = () => {
                     href='#'
                     className={classes.navigationLink}
                   >
-                    <Typography variant='subtitle1'>
+                    <Typography 
+                      variant='subtitle1'
+                      className={classes.navigationText}
+                    >
                       {item}
                     </Typography>
                   </Link>
