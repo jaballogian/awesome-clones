@@ -38,11 +38,11 @@ const Index = () => {
     },
     { 
       image: Image2, 
-      color: colors.deepBlush, 
+      color: colors.hopbush, 
     },
     { 
       image: Image3, 
-      color: colors.hopbush, 
+      color: colors.deepBlush, 
     },
     { 
       image: Image4, 
