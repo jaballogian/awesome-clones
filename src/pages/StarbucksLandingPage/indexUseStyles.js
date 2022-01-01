@@ -51,6 +51,10 @@ const useStyles = makeStyles((theme) => ({
     height: 30,
     cursor: 'pointer',
     zIndex: 20,
+    // XS AND SM SCREENS
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
   },
   logo: {
     maxWidth: 80,
