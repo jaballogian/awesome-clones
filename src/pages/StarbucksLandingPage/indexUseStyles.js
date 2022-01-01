@@ -14,6 +14,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     background: 'white',
+    // XS SCREEN
+    [theme.breakpoints.only('xs')]: {
+      padding: '100px 20px 120px',
+      flexDirection: 'column',
+    },
+    // MD SCREEN
+    [theme.breakpoints.only('sm')]: {
+      padding: '100px 40px 120px',
+      flexDirection: 'column',
+    },
   },
   header: {
     position: 'absolute',
@@ -23,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
     padding: '20px 100px',
     background: 'transparent',
     boxShadow: 'unset',
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      padding: 20,
+    },
   },
   toolbar: {
     display: 'flex',
@@ -32,9 +46,17 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     maxWidth: 80,
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      maxWidth: 60,
+    },
   },
   navigation: {
     display: 'flex',
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   navigationItem: {
     minWidth: 'fit-content',
@@ -50,12 +72,21 @@ const useStyles = makeStyles((theme) => ({
   textContainer: {
     position: 'relative',
     maxWidth: 600,
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '100%',
+    },
   },
   title: {
     fontSize: '4em',
     color: colors.mineShaft,
     lineHeight: 1.4,
     fontWeight: 500,
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2.5em',
+      marginBottom: 15,
+    },
   },
   titleGreen: {
     color: colors.funGreen,
@@ -83,9 +114,20 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end',
     paddingRight: 50,
     marginTop: 50,
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '100%',
+      justifyContent: 'center',
+      paddingRight: 0,
+      margin: '25px 0px',
+    },
   },
   imageCoffee: {
     maxWidth: 340,
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      maxWidth: 250,
+    },
   },
   coffeeOptionsRoot: {
     padding: 'unset',
@@ -108,6 +150,10 @@ const useStyles = makeStyles((theme) => ({
   },
   coffeeOptionsImage: {
     maxHeight: 120,
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      maxHeight: 80,
+    },
   },
   socialMediasRoot: {
     padding: 'unset',
@@ -119,6 +165,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      backgroundColor: colors.funGreen,
+      right: 0,
+      padding: 15,
+      borderTopLeftRadius: 5,
+      borderBottomLeftRadius: 5,
+    },
   },
   socialMediasItem: {
     padding: 'unset',
@@ -137,7 +191,12 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     width: '100%',
     height: '100%',
+    transition: '0.5s ease-in-out',
     clipPath: 'circle(600px at right 800px)',
+    // XS AND SM SCREENS
+    [theme.breakpoints.down('md')]: {
+      clipPath: 'circle(400px at center bottom)',
+    },
   },
 }))
 
