@@ -6,6 +6,7 @@ import WaterDropLogoEffect from 'pages/WaterDropLogoEffect/Index'
 import GlassmorphismCardHover from 'pages/GlassmorphismCardHover/Index'
 import StarbucksLandingPage from 'pages/StarbucksLandingPage/Index'
 import Carousell from 'pages/Carousell/Index'
+import VideoInsideText from 'pages/VideoInsideText/Index'
 
 function App() {
   // PAGE ITEMS: ID, ELEMENT, SOURCE, CREDITS, GITHUB CODE
@@ -29,6 +30,11 @@ function App() {
       id: 4,
       element: <Carousell/>,
       source: 'https://www.youtube.com/watch?v=0wvrlOyGlq0',
+    },
+    {
+      id: 5,
+      element: <VideoInsideText/>,
+      source: 'https://www.youtube.com/watch?v=S1LyYnyqRRs',
     },
   ]
 
