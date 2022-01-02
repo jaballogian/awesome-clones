@@ -23,11 +23,6 @@ const Index = () => {
     ImageCloud3,
     ImageCloud4,
     ImageCloud5,
-    ImageCloud5,
-    ImageCloud4,
-    ImageCloud3,
-    ImageCloud2,
-    ImageCloud1,
   ]
 
   return (
