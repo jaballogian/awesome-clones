@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     mixBlendMode: 'screen',
     fontWeight: 900,
+    // XS AND SM SCREEN
+    [theme.breakpoints.down('md')]: {
+      fontSize: '25vw',
+    },
   },
 }))
 
