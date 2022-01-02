@@ -5,10 +5,6 @@ import ImageCastle from './assets/castle.jpg'
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    height: '100vh',
-  },
   topContainer: {
     width: '100%',
     height: '100vh',
