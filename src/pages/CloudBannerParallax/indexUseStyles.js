@@ -56,9 +56,16 @@ const useStyles = makeStyles((theme) => ({
       transform: 'scale(3)',
     },
   },
-  bottomContainer: {},
-  caption: {},
-  paragraph: {},
+  bottomContainer: {
+    padding: 100,
+  },
+  caption: {
+    marginBottom: 20,
+    fontWeight: 600,
+  },
+  paragraph: {
+    textAlign: 'justify',
+  },
 }))
 
 export default useStyles
