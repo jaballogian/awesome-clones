@@ -3,7 +3,6 @@
 ## Source/Inspiration
 
 https://www.youtube.com/watch?v=S1LyYnyqRRs by [Online Tutorial](https://www.youtube.com/c/OnlineTutorials4Designers) channel
-and https://www.youtube.com/watch?v=ThaIBFd387A by [Coding Snow](https://www.youtube.com/c/CodingSnow/videos) channel
 
 ## Videos
 
