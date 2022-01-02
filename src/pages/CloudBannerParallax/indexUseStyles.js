@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: 'white',
-    fontSize: '12em',
     textTransform: 'uppercase',
     fontWeight: 900,
   },
@@ -54,6 +53,14 @@ const useStyles = makeStyles((theme) => ({
   },
   bottomContainer: {
     padding: 100,
+    // XS SCREEN
+    [theme.breakpoints.only('xs')]: {
+      padding: 25,
+    },
+    // SM SCREEN
+    [theme.breakpoints.only('sm')]: {
+      padding: 50,
+    },
   },
   caption: {
     marginBottom: 20,
