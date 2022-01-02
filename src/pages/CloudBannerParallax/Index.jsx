@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 // CONSTANTS
 import customTheme from './constants'
@@ -21,6 +21,8 @@ import useStyles from './indexUseStyles'
 const Index = () => {
   const classes = useStyles()
 
+  const [ offsetY, setOffsetY ] = useState(0)
+
   const cloudsList = [ 
     ImageCloud1,
     ImageCloud2,
@@ -28,6 +30,14 @@ const Index = () => {
     ImageCloud4,
     ImageCloud5,
   ]
+
+  const handleOnMouseScroll = () => setOffsetY(window.scrollY)
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleOnMouseScroll)
+
+    return () => window.removeEventListener('scroll', handleOnMouseScroll)
+  }, [])
 
   return (
     <ThemeProvider theme={customTheme}>
@@ -37,6 +47,7 @@ const Index = () => {
           <Typography
             variant='h1'
             className={classes.title}
+            style={{ marginBottom: `${offsetY * 2}px`}}
           >
             Castle
           </Typography>
