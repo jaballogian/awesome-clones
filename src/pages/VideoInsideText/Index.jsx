@@ -1,10 +1,14 @@
 import React from 'react'
 
+// CONSTANTS
+import customTheme from './constants'
+
 // MUIS
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
+import { ThemeProvider } from '@mui/material/styles'
 
 // STYLES
 import useStyles from './indexUseStyles'
@@ -16,27 +20,29 @@ const Index = () => {
   const classes = useStyles()
 
   return (
-    <Box className={classes.root}>
-      {/* VIDEO */}
-      <Card>
-        <CardMedia
-          component='video'
-          src={video}
-          alt=''
-          autoPlay
-          loop
-          muted
-          className={classes.video}
-        />
-      </Card>
-      {/* TEXT */}
-      <Typography
-        variant='h1'
-        className={classes.text}
-      >
-        Image<br/>Inside<br/>Video
-      </Typography>
-    </Box>
+    <ThemeProvider theme={customTheme}>
+      <Box className={classes.root}>
+        {/* VIDEO */}
+        <Card>
+          <CardMedia
+            component='video'
+            src={video}
+            alt=''
+            autoPlay
+            loop
+            muted
+            className={classes.video}
+          />
+        </Card>
+        {/* TEXT */}
+        <Typography
+          variant='h1'
+          className={classes.text}
+        >
+          Image<br/>Inside<br/>Video
+        </Typography>
+      </Box>
+    </ThemeProvider>
   )
 }
 
