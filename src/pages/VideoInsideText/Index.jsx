@@ -4,6 +4,7 @@ import React from 'react'
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
+import Typography from '@mui/material/Typography'
 
 // STYLES
 import useStyles from './indexUseStyles'
@@ -16,8 +17,8 @@ const Index = () => {
 
   return (
     <Box className={classes.root}>
+      {/* VIDEO */}
       <Card>
-        {/* VIDEO */}
         <CardMedia
           component='video'
           src={video}
@@ -28,6 +29,13 @@ const Index = () => {
           className={classes.video}
         />
       </Card>
+      {/* TEXT */}
+      <Typography
+        variant='h1'
+        className={classes.text}
+      >
+        Image<br/>Inside<br/>Video
+      </Typography>
     </Box>
   )
 }
