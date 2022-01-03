@@ -21,6 +21,11 @@ import useStyles from './indexUseStyles'
 const Index = () => {
   const classes = useStyles()
 
+  const handleOnIconIsClicked = (inputUrl) => {
+    const newWindow = window.open(inputUrl, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
+
   return (
     <Grid 
       container
@@ -54,17 +59,17 @@ const Index = () => {
             {/* ICONS CONTAINER */}
             <Box className={classes.cardsIconContainer}>
               {/* SOURCE ICON */}
-              <IconButton>
+              <IconButton onClick={() => handleOnIconIsClicked(item.source)}>
                 <IconYouTube/>
               </IconButton>
               
               {/* CREDITS ICON */}
-              <IconButton>
+              <IconButton onClick={() => handleOnIconIsClicked(item.credits)}>
                 <IconReceiptRounded/>
               </IconButton>
 
               {/* GITHUB ICON */}
-              <IconButton>
+              <IconButton onClick={() => handleOnIconIsClicked(item.githubCode)}>
                 <IconGitHub/>
               </IconButton>
             </Box>
