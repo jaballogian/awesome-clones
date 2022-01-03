@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     color: colors.shark,
   },
   navigationIconActive: {
-    transform: 'translateY(-35px)',
+    transform: 'translateY(-37.5px)',
   },
   navigationText: {
     position: 'absolute',
