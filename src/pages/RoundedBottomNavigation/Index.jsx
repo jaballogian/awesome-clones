@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 // CONSTANTS
 import customTheme from './constants'
+
+// CONTEXTS
+import { AllPagesContext } from 'contexts/AllPagesContext'
 
 // MUIS
 import Box from '@mui/material/Box'
@@ -23,7 +26,12 @@ import useStyles from './indexUseStyles'
 const Index = () => {
   const classes = useStyles()
 
+  const { breakpointType } = useContext(AllPagesContext)
+
   const [ activeItem, setActiveItem ] = useState(0)
+
+  let baseMultiplier = 1
+  if(breakpointType === 'sm') baseMultiplier = 1.5
 
   const navigationsList = [
     {
@@ -55,7 +63,7 @@ const Index = () => {
           {/* SELECTED ITEM */}
           <Box 
             className={classes.selectedItem}
-            sx={{ transform: `translateX(calc(60 * ${activeItem}px))` }}
+            sx={{ transform: `translateX(calc(60 * ${baseMultiplier} * ${activeItem}px))` }}
           />
 
           {/* NAVIGATIONS LIST */}
@@ -76,7 +84,7 @@ const Index = () => {
 
               {/* TEXT */}
               <Typography 
-                variant='subtitle1'
+                variant='h6'
                 className={
                   activeItem === index ?
                   `${classes.navigationText} ${classes.navigationTextActive}` :
