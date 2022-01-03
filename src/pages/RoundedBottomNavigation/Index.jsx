@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // MUIS
 import Box from '@mui/material/Box'
@@ -18,6 +18,8 @@ import useStyles from './indexUseStyles'
 
 const Index = () => {
   const classes = useStyles()
+
+  const [ hoveredItem, setHoveredItem ] = useState(null)
 
   const navigationsList = [
     {
@@ -49,14 +51,26 @@ const Index = () => {
           <ListItem
             key={index}
             className={classes.navigationItem}
+            onMouseEnter={() => setHoveredItem(index)}
+            onMouseLeave={() => setHoveredItem(null)}
           >
             {/* IMAGE */}
-            <item.icon className={classes.navigationIcon}/>
+            <item.icon 
+              className={
+                hoveredItem === index ?
+                `${classes.navigationIcon} ${classes.navigationIconHovered}` :
+                classes.navigationIcon
+              }
+            />
 
             {/* TEXT */}
             <Typography 
               variant='subtitle1'
-              className={classes.navigationText}
+              className={
+                hoveredItem === index ?
+                `${classes.navigationText} ${classes.navigationTextHovered}` :
+                classes.navigationText
+              }
             >
               {item.text}
             </Typography>
