@@ -13,6 +13,7 @@ import StarbucksLandingPage from 'pages/StarbucksLandingPage/Index'
 import Carousell from 'pages/Carousell/Index'
 import VideoInsideText from 'pages/VideoInsideText/Index'
 import CloudBannerParallax from 'pages/CloudBannerParallax/Index'
+import RoundedBottomNavigation from 'pages/RoundedBottomNavigation/Index'
 
 const clonedPages = [
   {
@@ -68,6 +69,15 @@ const clonedPages = [
     preview: Image6,
     credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/CloudBannerParallax/credits.md',
     githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/CloudBannerParallax',
+  },
+  {
+    id: 7,
+    element: <RoundedBottomNavigation/>,
+    source: 'https://www.youtube.com/watch?v=ArTVfdHOB-M',
+    title: 'Rounded Bottom Navigation',
+    // preview: Image6,
+    // credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/CloudBannerParallax/credits.md',
+    // githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/CloudBannerParallax',
   },
 ]
 
