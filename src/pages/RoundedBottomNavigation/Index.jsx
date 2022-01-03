@@ -19,7 +19,7 @@ import useStyles from './indexUseStyles'
 const Index = () => {
   const classes = useStyles()
 
-  const [ hoveredItem, setHoveredItem ] = useState(null)
+  const [ activeItem, setActiveItem ] = useState(0)
 
   const navigationsList = [
     {
@@ -47,18 +47,24 @@ const Index = () => {
   return (
     <Box className={classes.root}>
       <List className={classes.navigationsList}>
+        {/* SELECTED ITEM */}
+        <Box 
+          className={classes.selectedItem}
+          sx={{ transform: `translateX(calc(70 * ${activeItem}px))` }}
+        />
+
+        {/* NAVIGATIONS LIST */}
         {navigationsList.map((item, index) => (
           <ListItem
             key={index}
             className={classes.navigationItem}
-            onMouseEnter={() => setHoveredItem(index)}
-            onMouseLeave={() => setHoveredItem(null)}
+            onClick={() => setActiveItem(index)}
           >
             {/* IMAGE */}
             <item.icon 
               className={
-                hoveredItem === index ?
-                `${classes.navigationIcon} ${classes.navigationIconHovered}` :
+                activeItem === index ?
+                `${classes.navigationIcon} ${classes.navigationIconActive}` :
                 classes.navigationIcon
               }
             />
@@ -67,8 +73,8 @@ const Index = () => {
             <Typography 
               variant='subtitle1'
               className={
-                hoveredItem === index ?
-                `${classes.navigationText} ${classes.navigationTextHovered}` :
+                activeItem === index ?
+                `${classes.navigationText} ${classes.navigationTextActive}` :
                 classes.navigationText
               }
             >

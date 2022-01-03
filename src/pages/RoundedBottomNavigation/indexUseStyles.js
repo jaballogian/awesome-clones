@@ -15,13 +15,42 @@ const useStyles = makeStyles((theme) => ({
   },
   navigationsList: {
     width: 400,
-    height: 75,
+    height: 70,
     padding: '0px 25px',
     borderRadius: 10,
     backgroundColor: 'white',
     position: 'relative',
     display: 'flex',
-    justifyContent: 'center',
+  },
+  selectedItem: {
+    position: 'absolute',
+    height: 70,
+    width: 70,
+    backgroundColor: colors.springGreen,
+    top: '-50%',
+    borderRadius: '50%',
+    border: `6px solid ${colors.shark}`,
+    transition: '0.5s ease-in-out',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      top: '50%',
+      left: -22,
+      width: 20,
+      height: 20,
+      borderTopRightRadius: 20,
+      boxShadow: `0px -10px 0px 0px ${colors.shark}`,
+    },
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      top: '50%',
+      right: -22,
+      width: 20,
+      height: 20,
+      borderTopLeftRadius: 20,
+      boxShadow: `0px -10px 0px 0px ${colors.shark}`,
+    },
   },
   navigationItem: {
     display: 'flex',
@@ -29,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     width: 70,
     padding: 0,
+    cursor: 'pointer',
   },
   navigationIcon: {
     position: 'relative',
@@ -36,19 +66,19 @@ const useStyles = makeStyles((theme) => ({
     transition: '0.5s ease-in-out',
     color: colors.shark,
   },
-  navigationIconHovered: {
+  navigationIconActive: {
     transform: 'translateY(-35px)',
   },
   navigationText: {
     position: 'absolute',
     color: colors.shark,
     opacity: 0,
-    bottom: 10,
+    bottom: 0,
     transition: '0.5s ease-in-out',
   },
-  navigationTextHovered: {
+  navigationTextActive: {
     opacity: 1,
-    transform: 'translateY(-15px)',
+    transform: 'translateY(-5px)',
   },
 }))
 
