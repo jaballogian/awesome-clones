@@ -5,6 +5,7 @@ import { colors } from './constants'
 import { makeStyles } from '@mui/styles'
 
 const smMultiplier = 1.5
+const mdMultiplier = 2.5
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,6 +28,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('sm')]: {
       width: 340 * smMultiplier,
       height: 60 * smMultiplier,
+    },
+    // MD SCREEN
+    [theme.breakpoints.only('md')]: {
+      width: 340 * mdMultiplier,
+      height: 60 * mdMultiplier,
     },
   },
   selectedItem: {
@@ -63,6 +69,11 @@ const useStyles = makeStyles((theme) => ({
       width: 60 * smMultiplier,
       height: 60 * smMultiplier,
     },
+    // MD SCREEN
+    [theme.breakpoints.only('md')]: {
+      width: 60 * mdMultiplier,
+      height: 60 * mdMultiplier,
+    },
   },
   navigationItem: {
     display: 'flex',
@@ -74,6 +85,10 @@ const useStyles = makeStyles((theme) => ({
     // SM SCREEN
     [theme.breakpoints.only('sm')]: {
       width: 60 * smMultiplier,
+    },
+    // MD SCREEN
+    [theme.breakpoints.only('md')]: {
+      width: 60 * mdMultiplier,
     },
   },
   navigationIcon: {
@@ -87,12 +102,21 @@ const useStyles = makeStyles((theme) => ({
       height: 60 * smMultiplier,
       width: 24 * smMultiplier,
     },
+    // MD SCREEN
+    [theme.breakpoints.only('md')]: {
+      height: 60 * mdMultiplier,
+      width: 24 * mdMultiplier,
+    },
   },
   navigationIconActive: {
     transform: 'translateY(-30px)',
     // SM SCREEN
     [theme.breakpoints.only('sm')]: {
       transform: `translateY(-${30 * smMultiplier}px)`,
+    },
+    // MD SCREEN
+    [theme.breakpoints.only('md')]: {
+      transform: `translateY(-${30 * mdMultiplier}px)`,
     },
   },
   navigationText: {
@@ -102,9 +126,13 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     transition: '0.5s ease-in-out',
     fontWeight: 600,
-    // XS SCREEN
-    [theme.breakpoints.only('xs')]: {
-      fontSize: 16,
+    // SM SCREEN
+    [theme.breakpoints.only('sm')]: {
+      fontSize: 18,
+    },
+    // MD SCREEN
+    [theme.breakpoints.only('md')]: {
+      fontSize: 28,
     },
   },
   navigationTextActive: {
@@ -113,6 +141,10 @@ const useStyles = makeStyles((theme) => ({
     // SM SCREEN
     [theme.breakpoints.only('sm')]: {
       transform: `translateY(-${6 * smMultiplier}px)`,
+    },
+    // MD SCREEN
+    [theme.breakpoints.only('md')]: {
+      transform: `translateY(-${6 * mdMultiplier}px)`,
     },
   },
 }))

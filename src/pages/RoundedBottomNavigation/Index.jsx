@@ -32,6 +32,7 @@ const Index = () => {
 
   let baseMultiplier = 1
   if(breakpointType === 'sm') baseMultiplier = 1.5
+  else if(breakpointType === 'md') baseMultiplier = 2.5
 
   const navigationsList = [
     {
@@ -84,7 +85,7 @@ const Index = () => {
 
               {/* TEXT */}
               <Typography 
-                variant='h6'
+                variant='subtitle1'
                 className={
                   activeItem === index ?
                   `${classes.navigationText} ${classes.navigationTextActive}` :
