@@ -6,6 +6,7 @@ import { makeStyles } from '@mui/styles'
 
 const smMultiplier = 1.5
 const mdMultiplier = 2.5
+const lgMultiplier = 3.25
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       width: 340 * mdMultiplier,
       height: 60 * mdMultiplier,
+    },
+    // LG SCREEN
+    [theme.breakpoints.only('lg')]: {
+      width: 340 * lgMultiplier,
+      height: 60 * lgMultiplier,
     },
   },
   selectedItem: {
@@ -74,6 +80,11 @@ const useStyles = makeStyles((theme) => ({
       width: 60 * mdMultiplier,
       height: 60 * mdMultiplier,
     },
+    // LG SCREEN
+    [theme.breakpoints.only('lg')]: {
+      width: 60 * lgMultiplier,
+      height: 60 * lgMultiplier,
+    },
   },
   navigationItem: {
     display: 'flex',
@@ -89,6 +100,10 @@ const useStyles = makeStyles((theme) => ({
     // MD SCREEN
     [theme.breakpoints.only('md')]: {
       width: 60 * mdMultiplier,
+    },
+    // LG SCREEN
+    [theme.breakpoints.only('lg')]: {
+      width: 60 * lgMultiplier,
     },
   },
   navigationIcon: {
@@ -107,6 +122,11 @@ const useStyles = makeStyles((theme) => ({
       height: 60 * mdMultiplier,
       width: 24 * mdMultiplier,
     },
+    // LG SCREEN
+    [theme.breakpoints.only('lg')]: {
+      height: 60 * lgMultiplier,
+      width: 24 * lgMultiplier,
+    },
   },
   navigationIconActive: {
     transform: 'translateY(-30px)',
@@ -117,6 +137,10 @@ const useStyles = makeStyles((theme) => ({
     // MD SCREEN
     [theme.breakpoints.only('md')]: {
       transform: `translateY(-${30 * mdMultiplier}px)`,
+    },
+    // LG SCREEN
+    [theme.breakpoints.only('lg')]: {
+      transform: `translateY(-${30 * lgMultiplier}px)`,
     },
   },
   navigationText: {
@@ -134,6 +158,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       fontSize: 28,
     },
+    // LG SCREEN
+    [theme.breakpoints.only('lg')]: {
+      fontSize: 40,
+    },
   },
   navigationTextActive: {
     opacity: 1,
@@ -145,6 +173,10 @@ const useStyles = makeStyles((theme) => ({
     // MD SCREEN
     [theme.breakpoints.only('md')]: {
       transform: `translateY(-${6 * mdMultiplier}px)`,
+    },
+    // LG SCREEN
+    [theme.breakpoints.only('lg')]: {
+      transform: `translateY(-${6 * lgMultiplier}px)`,
     },
   },
 }))
