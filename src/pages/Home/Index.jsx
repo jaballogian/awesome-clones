@@ -12,7 +12,6 @@ import Typography from '@mui/material/Typography'
 
 // MUI ICONS
 import IconGitHub from '@mui/icons-material/GitHub'
-import IconPlayArrowRounded from '@mui/icons-material/PlayArrowRounded'
 import IconReceiptRounded from '@mui/icons-material/ReceiptRounded'
 import IconYouTube from '@mui/icons-material/YouTube'
 
@@ -67,11 +66,6 @@ const Index = () => {
               {/* GITHUB ICON */}
               <IconButton>
                 <IconGitHub/>
-              </IconButton>
-
-              {/* PLAY ICON */}
-              <IconButton>
-                <IconPlayArrowRounded/>
               </IconButton>
             </Box>
           </Card>
