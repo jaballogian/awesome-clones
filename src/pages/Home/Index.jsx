@@ -37,9 +37,8 @@ const Index = () => {
           key={index}
           item
           xs={12} sm={6} lg={4}
-          className={classes.cardRoot}
         >
-          <Card>
+          <Card className={classes.cardRoot}>
             {/* PREVIEW IMAGE */}
             <Box
               component='img'

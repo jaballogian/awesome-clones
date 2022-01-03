@@ -8,6 +8,12 @@ const useStyles = makeStyles((theme) => ({
   },
   cardRoot: {
     position: 'relative',
+    cursor: 'pointer',
+    transform: 'scale(1)',
+    transition: '0.25s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.05)',
+    },
   },
   cardImage: {
     width: '100%',
