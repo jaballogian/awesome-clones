@@ -33,7 +33,7 @@ const Index = () => {
   let baseMultiplier = 1
   if(breakpointType === 'sm') baseMultiplier = 1.5
   else if(breakpointType === 'md') baseMultiplier = 2.5
-  else if(breakpointType === 'lg') baseMultiplier = 3.25
+  else if(breakpointType === 'lg' || breakpointType === 'xl') baseMultiplier = 3.25
 
   const navigationsList = [
     {

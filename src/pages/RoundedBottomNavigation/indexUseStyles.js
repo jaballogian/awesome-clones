@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   navigationsList: {
-    width: 340,
     height: 60,
     padding: '0px 20px',
     borderRadius: 10,
@@ -27,18 +26,18 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     // SM SCREEN
     [theme.breakpoints.only('sm')]: {
-      width: 340 * smMultiplier,
       height: 60 * smMultiplier,
+      padding: `0px ${20 * smMultiplier}px`,
     },
     // MD SCREEN
     [theme.breakpoints.only('md')]: {
-      width: 340 * mdMultiplier,
       height: 60 * mdMultiplier,
+      padding: `0px ${20 * mdMultiplier}px`,
     },
-    // LG SCREEN
-    [theme.breakpoints.only('lg')]: {
-      width: 340 * lgMultiplier,
+    // LG AND XL SCREENS
+    [theme.breakpoints.up('lg')]: {
       height: 60 * lgMultiplier,
+      padding: `0px ${20 * lgMultiplier}px`,
     },
   },
   selectedItem: {
@@ -54,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       content: '""',
       position: 'absolute',
       top: '50%',
-      left: -22,
+      left: -21.5,
       width: 20,
       height: 20,
       borderTopRightRadius: 20,
@@ -64,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
       content: '""',
       position: 'absolute',
       top: '50%',
-      right: -22,
+      right: -21.5,
       width: 20,
       height: 20,
       borderTopLeftRadius: 20,
@@ -74,16 +73,61 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('sm')]: {
       width: 60 * smMultiplier,
       height: 60 * smMultiplier,
+      border: `${6 * smMultiplier}px solid ${colors.shark}`,
+      '&::before': {
+        boxShadow: `${1 * smMultiplier}px -${10 * smMultiplier}px 0px 0px ${colors.shark}`,
+        left: -21.5 * smMultiplier,
+        width: 20 * smMultiplier,
+        height: 20 * smMultiplier,
+        borderTopRightRadius: 20 * smMultiplier,
+      },
+      '&::after': {
+        boxShadow: `-${1 * smMultiplier}px -${10 * smMultiplier}px 0px 0px ${colors.shark}`,
+        right: -21.5 * smMultiplier,
+        width: 20 * smMultiplier,
+        height: 20 * smMultiplier,
+        borderTopLeftRadius: 20 * smMultiplier,
+      },
     },
     // MD SCREEN
     [theme.breakpoints.only('md')]: {
       width: 60 * mdMultiplier,
       height: 60 * mdMultiplier,
+      border: `${6 * mdMultiplier}px solid ${colors.shark}`,
+      '&::before': {
+        boxShadow: `${1 * mdMultiplier}px -${10 * mdMultiplier}px 0px 0px ${colors.shark}`,
+        left: -21.5 * mdMultiplier,
+        width: 20 * mdMultiplier,
+        height: 20 * mdMultiplier,
+        borderTopRightRadius: 20 * mdMultiplier,
+      },
+      '&::after': {
+        boxShadow: `-${1 * mdMultiplier}px -${10 * mdMultiplier}px 0px 0px ${colors.shark}`,
+        right: -21.5 * mdMultiplier,
+        width: 20 * mdMultiplier,
+        height: 20 * mdMultiplier,
+        borderTopLeftRadius: 20 * mdMultiplier,
+      },
     },
-    // LG SCREEN
-    [theme.breakpoints.only('lg')]: {
+    // LG AND XL SCREENS
+    [theme.breakpoints.up('lg')]: {
       width: 60 * lgMultiplier,
       height: 60 * lgMultiplier,
+      border: `${6 * lgMultiplier}px solid ${colors.shark}`,
+      '&::before': {
+        boxShadow: `${1 * lgMultiplier}px -${10 * lgMultiplier}px 0px 0px ${colors.shark}`,
+        left: -21.5 * lgMultiplier,
+        width: 20 * lgMultiplier,
+        height: 20 * lgMultiplier,
+        borderTopRightRadius: 20 * lgMultiplier,
+      },
+      '&::after': {
+        boxShadow: `-${1 * lgMultiplier}px -${10 * lgMultiplier}px 0px 0px ${colors.shark}`,
+        right: -21.5 * lgMultiplier,
+        width: 20 * lgMultiplier,
+        height: 20 * lgMultiplier,
+        borderTopLeftRadius: 20 * lgMultiplier,
+      },
     },
   },
   navigationItem: {
@@ -101,8 +145,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       width: 60 * mdMultiplier,
     },
-    // LG SCREEN
-    [theme.breakpoints.only('lg')]: {
+    // LG AND XL SCREENS
+    [theme.breakpoints.up('lg')]: {
       width: 60 * lgMultiplier,
     },
   },
@@ -122,8 +166,8 @@ const useStyles = makeStyles((theme) => ({
       height: 60 * mdMultiplier,
       width: 24 * mdMultiplier,
     },
-    // LG SCREEN
-    [theme.breakpoints.only('lg')]: {
+    // LG AND XL SCREENS
+    [theme.breakpoints.up('lg')]: {
       height: 60 * lgMultiplier,
       width: 24 * lgMultiplier,
     },
@@ -138,8 +182,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       transform: `translateY(-${30 * mdMultiplier}px)`,
     },
-    // LG SCREEN
-    [theme.breakpoints.only('lg')]: {
+    // LG AND XL SCREENS
+    [theme.breakpoints.up('lg')]: {
       transform: `translateY(-${30 * lgMultiplier}px)`,
     },
   },
@@ -158,8 +202,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       fontSize: 28,
     },
-    // LG SCREEN
-    [theme.breakpoints.only('lg')]: {
+    // LG AND XL SCREENS
+    [theme.breakpoints.up('lg')]: {
       fontSize: 40,
     },
   },
@@ -174,8 +218,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       transform: `translateY(-${6 * mdMultiplier}px)`,
     },
-    // LG SCREEN
-    [theme.breakpoints.only('lg')]: {
+    // LG AND XL SCREENS
+    [theme.breakpoints.up('lg')]: {
       transform: `translateY(-${6 * lgMultiplier}px)`,
     },
   },
