@@ -55,7 +55,7 @@ const Index = () => {
           {/* SELECTED ITEM */}
           <Box 
             className={classes.selectedItem}
-            sx={{ transform: `translateX(calc(70 * ${activeItem}px))` }}
+            sx={{ transform: `translateX(calc(60 * ${activeItem}px))` }}
           />
 
           {/* NAVIGATIONS LIST */}

@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   navigationsList: {
-    width: 400,
-    height: 70,
-    padding: '0px 25px',
+    width: 340,
+    height: 60,
+    padding: '0px 20px',
     borderRadius: 10,
     backgroundColor: 'white',
     position: 'relative',
@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
   },
   selectedItem: {
     position: 'absolute',
-    height: 70,
-    width: 70,
+    height: 60,
+    width: 60,
     backgroundColor: colors.springGreen,
     top: '-50%',
     borderRadius: '50%',
@@ -56,18 +56,18 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    width: 70,
+    width: 60,
     padding: 0,
     cursor: 'pointer',
   },
   navigationIcon: {
     position: 'relative',
-    height: 75,
+    height: 60,
     transition: '0.5s ease-in-out',
     color: colors.shark,
   },
   navigationIconActive: {
-    transform: 'translateY(-37.5px)',
+    transform: 'translateY(-30px)',
   },
   navigationText: {
     position: 'absolute',
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navigationTextActive: {
     opacity: 1,
-    transform: 'translateY(-5px)',
+    transform: 'translateY(-0px)',
   },
 }))
 
