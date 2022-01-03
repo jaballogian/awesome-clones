@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 // PAGES
+import Home from 'pages/Home/Index'
 import WaterDropLogoEffect from 'pages/WaterDropLogoEffect/Index'
 import GlassmorphismCardHover from 'pages/GlassmorphismCardHover/Index'
 import StarbucksLandingPage from 'pages/StarbucksLandingPage/Index'
@@ -46,6 +47,10 @@ function App() {
 
   return (
     <Routes>
+      <Route 
+        path='/'
+        element={<Home/>}
+      />
       {pages.map((item, index) => (
         <Route 
           key={index}
