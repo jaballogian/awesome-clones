@@ -39,7 +39,7 @@ const Index = () => {
           variant='h1'
           className={classes.text}
         >
-          Image<br/>Inside<br/>Video
+          Video<br/>Inside<br/>Text
         </Typography>
       </Box>
     </ThemeProvider>
