@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
       width: 20,
       height: 20,
       borderTopRightRadius: 20,
-      boxShadow: `0px -10px 0px 0px ${colors.shark}`,
+      boxShadow: `1px -10px 0px 0px ${colors.shark}`,
     },
     '&::after': {
       content: '""',
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
       width: 20,
       height: 20,
       borderTopLeftRadius: 20,
-      boxShadow: `0px -10px 0px 0px ${colors.shark}`,
+      boxShadow: `-1px -10px 0px 0px ${colors.shark}`,
     },
   },
   navigationItem: {
@@ -75,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0,
     bottom: 0,
     transition: '0.5s ease-in-out',
+    fontWeight: 600,
   },
   navigationTextActive: {
     opacity: 1,
