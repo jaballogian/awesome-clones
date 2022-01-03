@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // DATA
 import clonedPages from 'constants/clonedPages'
@@ -21,6 +22,8 @@ import useStyles from './indexUseStyles'
 const Index = () => {
   const classes = useStyles()
 
+  const navigate = useNavigate()
+
   const handleOnIconIsClicked = (inputUrl) => {
     const newWindow = window.open(inputUrl, '_blank', 'noopener,noreferrer')
     if (newWindow) newWindow.opener = null
@@ -38,7 +41,10 @@ const Index = () => {
           item
           xs={12} sm={6} lg={4}
         >
-          <Card className={classes.cardRoot}>
+          <Card 
+            className={classes.cardRoot}
+            onClick={() => navigate(`/clones/${item.id}`)}
+          >
             {/* PREVIEW IMAGE */}
             <Box
               component='img'
