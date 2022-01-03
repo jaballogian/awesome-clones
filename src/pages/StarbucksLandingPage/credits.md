@@ -4,6 +4,10 @@
 
 https://www.youtube.com/watch?v=91Q6RvKvd7o and https://www.youtube.com/watch?v=HXKNedyDbNE by [Online Tutorial](https://www.youtube.com/c/OnlineTutorials4Designers) channel
 
+## Icons
+
+1. MUI Icons: https://mui.com/components/material-icons/
+
 ## Images
 
 1. Starbucks logo: https://www.freepnglogos.com/images/starbucks-logo-png-1680.html
