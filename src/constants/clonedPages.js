@@ -15,6 +15,7 @@ import Carousell from 'pages/Carousell/Index'
 import VideoInsideText from 'pages/VideoInsideText/Index'
 import CloudBannerParallax from 'pages/CloudBannerParallax/Index'
 import RoundedBottomNavigation from 'pages/RoundedBottomNavigation/Index'
+import RoundedSidebarMenu from 'pages/RoundedSidebarMenu/Index'
 
 const clonedPages = [
   {
@@ -79,6 +80,15 @@ const clonedPages = [
     preview: Image7,
     credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedBottomNavigation/credits.md',
     githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedBottomNavigation',
+  },
+  {
+    id: 8,
+    element: <RoundedSidebarMenu/>,
+    source: 'https://www.youtube.com/watch?v=P_A2kNpyQBs',
+    title: 'Rounded Sidebar Menu',
+    // preview: Image7,
+    // credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedBottomNavigation/credits.md',
+    // githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedBottomNavigation',
   },
 ]
 
