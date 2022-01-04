@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography'
 
 // MUI ICONS
 import IconGitHub from '@mui/icons-material/GitHub'
+import IconPlayArrowRounded from '@mui/icons-material/PlayArrowRounded'
 import IconReceiptRounded from '@mui/icons-material/ReceiptRounded'
 import IconYouTube from '@mui/icons-material/YouTube'
 
@@ -41,10 +42,7 @@ const Index = () => {
           item
           xs={12} sm={6} lg={4}
         >
-          <Card 
-            className={classes.cardRoot}
-            onClick={() => navigate(`/clones/${item.id}`)}
-          >
+          <Card className={classes.cardRoot}>
             {/* PREVIEW IMAGE */}
             <Box
               component='img'
@@ -76,6 +74,11 @@ const Index = () => {
               {/* GITHUB ICON */}
               <IconButton onClick={() => handleOnIconIsClicked(item.githubCode)}>
                 <IconGitHub/>
+              </IconButton>
+
+              {/* PLAY ICON */}
+              <IconButton onClick={() => navigate(`/clones/${item.id}`)}>
+                <IconPlayArrowRounded/>
               </IconButton>
             </Box>
           </Card>
