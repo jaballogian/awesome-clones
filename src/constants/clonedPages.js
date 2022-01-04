@@ -5,6 +5,7 @@ import Image3 from 'assets/images/screenshots/3.png'
 import Image4 from 'assets/images/screenshots/4.png'
 import Image5 from 'assets/images/screenshots/5.png'
 import Image6 from 'assets/images/screenshots/6.png'
+import Image7 from 'assets/images/screenshots/7.png'
 
 // PAGES
 import WaterDropLogoEffect from 'pages/WaterDropLogoEffect/Index'
@@ -75,9 +76,9 @@ const clonedPages = [
     element: <RoundedBottomNavigation/>,
     source: 'https://www.youtube.com/watch?v=ArTVfdHOB-M',
     title: 'Rounded Bottom Navigation',
-    // preview: Image6,
-    // credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/CloudBannerParallax/credits.md',
-    // githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/CloudBannerParallax',
+    preview: Image7,
+    credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedBottomNavigation/credits.md',
+    githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedBottomNavigation',
   },
 ]
 
