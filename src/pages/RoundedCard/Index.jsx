@@ -42,22 +42,25 @@ const Index = () => {
           <Box className={classes.cardIconContainer}>
             <item.icon className={classes.cardIcon}/>
           </Box>
-          
-          {/* TITLE */}
-          {/* <Typography
-            variant='h2'
-            className={classes.cardTitle}
-          >
-            {item.title}
-          </Typography> */}
 
-          {/* CAPTION */}
-          {/* <Typography
-            variant='subtitle1'
-            className={classes.cardCaption}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </Typography> */}
+          {/* CONTENT */}
+          <Box className={classes.cardContent}>
+            {/* TITLE */}
+            <Typography
+              variant='h4'
+              className={classes.cardTitle}
+            >
+              {item.title}
+            </Typography>
+
+            {/* CAPTION */}
+            <Typography
+              variant='subtitle1'
+              className={classes.cardCaption}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </Typography>
+          </Box>
         </Card>
       ))}
     </Box>
