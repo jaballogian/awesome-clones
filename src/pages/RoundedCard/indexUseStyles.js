@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'flex-start',
+    margin: 30,
     boxShadow:
       `0px 15px 0px white,
       inset 0px -15px 0px ${boxShadows.softWhite},
@@ -92,8 +93,20 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     zIndex: 1,
   },
-  cardTitle: {},
-  cardCaption: {},
+  cardContent: {
+    position: 'absolute',
+    width: '100%',
+    padding: 30,
+    paddingTop: 140,
+    textAlign: 'center',
+    color: 'white',
+  },
+  cardTitle: {
+    marginBottom: 10,
+  },
+  cardCaption: {
+    lineHeight: 1.5,
+  },
 }))
 
 export default useStyles
