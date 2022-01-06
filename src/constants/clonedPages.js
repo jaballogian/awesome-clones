@@ -15,7 +15,8 @@ import Carousell from 'pages/Carousell/Index'
 import VideoInsideText from 'pages/VideoInsideText/Index'
 import CloudBannerParallax from 'pages/CloudBannerParallax/Index'
 import RoundedBottomNavigation from 'pages/RoundedBottomNavigation/Index'
-import RoundedSidebarMenu from 'pages/RoundedSidebarMenu/Index'
+// import RoundedSidebarMenu from 'pages/RoundedSidebarMenu/Index'
+import RoundedCard from 'pages/RoundedCard/Index'
 
 const clonedPages = [
   {
@@ -81,11 +82,20 @@ const clonedPages = [
     credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedBottomNavigation/credits.md',
     githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedBottomNavigation',
   },
+  // {
+  //   id: 8,
+  //   element: <RoundedSidebarMenu/>,
+  //   source: 'https://www.youtube.com/watch?v=P_A2kNpyQBs',
+  //   title: 'Rounded Sidebar Menu',
+  //   preview: Image7,
+  //   credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedBottomNavigation/credits.md',
+  //   githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedBottomNavigation',
+  // },
   {
     id: 8,
-    element: <RoundedSidebarMenu/>,
-    source: 'https://www.youtube.com/watch?v=P_A2kNpyQBs',
-    title: 'Rounded Sidebar Menu',
+    element: <RoundedCard/>,
+    source: 'https://www.youtube.com/watch?v=waY55vGtUyo',
+    title: 'Rounded Card',
     // preview: Image7,
     // credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedBottomNavigation/credits.md',
     // githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedBottomNavigation',
