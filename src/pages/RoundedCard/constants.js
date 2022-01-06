@@ -1,3 +1,18 @@
+// MUIS
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
+
+let customTheme = createTheme({
+  typography: {
+    fontFamily: [
+      'Ubuntu', 'sans-serif',
+    ].join(','),
+  },
+})
+
+customTheme = responsiveFontSizes(customTheme)
+
+export default customTheme
+
 export const colors = {
   cornflowerBlue: '#645BF6', // BLUE
   dodgerBlue: '#287BFF', // BLUE
