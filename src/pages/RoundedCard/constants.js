@@ -1,6 +1,12 @@
 export const colors = {
+  cornflowerBlue: '#645BF6', // BLUE
   dodgerBlue: '#287BFF', // BLUE
+  heliotrope: '#9A4EFF', // LIGHT VIOLET
   martinique: '#3C2846', // DARK VIOLET
+  parisDaisy: '#FFEC61', // YELLOW
+  razzleDazzleRose: '#FF2AE0', // PINK
+  shockingPink: '#F321D7', // PINK
+  springGreen: '#24FF72', // GREEN
 }
 
 export const boxShadows = {
