@@ -37,6 +37,15 @@ const useStyles = makeStyles((theme) => ({
       pointerEvents: 'none',
       filter: 'blur(5px)',
     },
+    '&:nth-child(1)': {
+      backgroundImage: `linear-gradient(to bottom, ${colors.razzleDazzleRose}, ${colors.cornflowerBlue})`,
+    },
+    '&:nth-child(2)': {
+      backgroundImage: `linear-gradient(to bottom, ${colors.parisDaisy}, ${colors.shockingPink})`,
+    },
+    '&:nth-child(3)': {
+      backgroundImage: `linear-gradient(to bottom, ${colors.springGreen}, ${colors.heliotrope})`,
+    },
   },
   cardTitle: {},
   cardCaption: {},
