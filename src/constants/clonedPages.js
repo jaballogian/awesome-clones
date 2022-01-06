@@ -98,7 +98,7 @@ const clonedPages = [
     source: 'https://www.youtube.com/watch?v=waY55vGtUyo',
     title: 'Rounded Card',
     preview: Image8,
-    // credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedBottomNavigation/credits.md',
+    credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedCard/credits.md',
     githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedCard',
   },
 ]
