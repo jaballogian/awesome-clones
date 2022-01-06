@@ -12,7 +12,11 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100vh',
     backgroundColor: colors.martinique,
     flexWrap: 'wrap',
-    padding: 40,
+    padding: 20,
+    // XS AND SM SCREEN
+    [theme.breakpoints.down('md')]: {
+      padding: '20px 0px 50px',
+    },
   },
   card: {
     position: 'relative',
@@ -50,6 +54,14 @@ const useStyles = makeStyles((theme) => ({
     },
     '&:nth-child(3)': {
       backgroundImage: `linear-gradient(to bottom, ${colors.springGreen}, ${colors.heliotrope})`,
+    },
+    // XS SCREEN
+    [theme.breakpoints.only('xs')]: {
+      margin: '30px 0px',
+    },
+    // SM SCREEN
+    [theme.breakpoints.only('sm')]: {
+      margin: '30px 20px',
     },
   },
   cardIconContainer: {
