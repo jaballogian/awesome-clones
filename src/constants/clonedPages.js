@@ -6,6 +6,7 @@ import Image4 from 'assets/images/screenshots/4.png'
 import Image5 from 'assets/images/screenshots/5.png'
 import Image6 from 'assets/images/screenshots/6.png'
 import Image7 from 'assets/images/screenshots/7.png'
+import Image8 from 'assets/images/screenshots/8.png'
 
 // PAGES
 import WaterDropLogoEffect from 'pages/WaterDropLogoEffect/Index'
@@ -96,9 +97,9 @@ const clonedPages = [
     element: <RoundedCard/>,
     source: 'https://www.youtube.com/watch?v=waY55vGtUyo',
     title: 'Rounded Card',
-    // preview: Image7,
+    preview: Image8,
     // credits: 'https://github.com/jaballogian/awesome-clones/blob/master/src/pages/RoundedBottomNavigation/credits.md',
-    // githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedBottomNavigation',
+    githubCode: 'https://github.com/jaballogian/awesome-clones/tree/master/src/pages/RoundedCard',
   },
 ]
 
