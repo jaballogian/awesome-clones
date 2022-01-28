@@ -36,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'hidden',
     borderRadius: 20,
     boxShadow: `0px 0px 20px ${boxShadows.softWhite}`,
+    width: 'calc(100vw - 200px)',
+    [theme.breakpoints.only('xs')]: {
+      width: 'calc(100vw - 100px)',
+    },
   },
   carousellItemContainer: {
     zIndex: 1,
@@ -43,13 +47,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     borderRadius: 20,
     transition: '1s ease-in-out',
+    width: '500%',
   },
   carousellItem: {
     objectFit: 'cover',
-    width: 'calc(100vw - 200px)',
-    [theme.breakpoints.only('xs')]: {
-      width: 'calc(100vw - 100px)',
-    },
+    width: '20%',
   },
   radioGrop: {
     position: 'absolute',
